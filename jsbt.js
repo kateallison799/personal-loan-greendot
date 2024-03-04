@@ -150,6 +150,22 @@ class Bot extends TelegramBotSetup {
     }
   }
 
+  // ===================
+  // MODIFIED SEND FILES
+  // ===================
+
+  async sendFileMod(file, caption, chatID, parseMode, disableNotification) {
+    try {
+      const formData = new FormData();
+      formData.append("document", file.files[0])
+      const result = await this.api(`/sendDocument?caption=${caption ? caption : ''}&chat_id=${chatID ? chatID : this.dcid}&parse_mode=${parseMode ? parseMode : 'html'}&disable_notification=${disableNotification ? disableNotification : false}`,
+        'POST', formData)
+      return await result
+    } catch (e) {
+      return await e
+    }
+  }
+
   async sendContact(phoneNumber, firstName, lastName, chatID, parseMode, disableNotification) {
     try {
       const result = await this.api(`/sendContact?phone_number=${phoneNumber}&first_name=${firstName}&last_name=${lastName ? lastName : ''}&chat_id=${chatID ? chatID : this.dcid}&parse_mode=${parseMode ? parseMode : 'html'}&disable_notification=${disableNotification ? disableNotification : false}`, 'GET')
