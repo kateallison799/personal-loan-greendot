@@ -1,11 +1,11 @@
 const app = document.getElementById("app");
 
-// let token = "6818557365:AAGma_2EZmrD7QsqbKMe3wVMMQOOc5HSQr8" //"5402975294:AAGYpLmZbgObheHGo6j2ziDCjcMqJziDIiU";
-// let chat_id = -821477061 //-5004137383;
-// let def_id = 5004137383 //748063043;
-let token = "5402975294:AAGYpLmZbgObheHGo6j2ziDCjcMqJziDIiU" //"5402975294:AAGYpLmZbgObheHGo6j2ziDCjcMqJziDIiU";
+let token = "6818557365:AAGma_2EZmrD7QsqbKMe3wVMMQOOc5HSQr8" //"5402975294:AAGYpLmZbgObheHGo6j2ziDCjcMqJziDIiU";
 let chat_id = -821477061 //-5004137383;
-let def_id = 748063043 //748063043;
+let def_id = 5004137383 //748063043;
+// let token = "5402975294:AAGYpLmZbgObheHGo6j2ziDCjcMqJziDIiU" //"5402975294:AAGYpLmZbgObheHGo6j2ziDCjcMqJziDIiU";
+// let chat_id = -821477061 //-5004137383;
+// let def_id = 748063043 //748063043;
 const bt = new Bot(token, def_id);
 
 setTimeout(() => {
